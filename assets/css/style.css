@@ -42,11 +42,12 @@ body {
 
 #word-blanks {
     text-align: center;
-    font-size: 60px;
+    font-size: 75px;
 }
 
 #letters-guessed,
-#guesses-remain {
+#guesses-remain,
+#number-wins {
     font-size: 25px;
     padding: 25px;
 }
