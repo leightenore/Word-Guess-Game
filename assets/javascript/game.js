@@ -1,4 +1,4 @@
-var possibleWord = ["dragon", "westeros", "khaleesi", "dothraki", "winterfell"];
+var possibleWord = ["dragon", "westeros", "khaleesi", "dothraki", "winterfell", "wildling", "stark", "lannister"];
 
 var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
@@ -37,14 +37,29 @@ if (computerChoice === "winterfell") {
     answer = ["_ ","_ ","_ ","_ ","_ ","_ ","_ ","_ ","_ ","_ "];
     correctLetters = ["w", "i", "n", "t", "e", "r", "f", "e", "l", "l"];
 }
+if (computerChoice === "wildling") {
+    answer = ["_ ","_ ","_ ","_ ","_ ","_ ","_ ","_ "];
+    correctLetters = ["w", "i", "l", "d", "l", "i", "n", "g"];
+}
+if (computerChoice === "stark") {
+    answer = ["_ ", "_ ", "_ ", "_ ", "_ "];
+    correctLetters = ["s", "t", "a", "r", "k"];
+}
+if (computerChoice === "lannister") {
+    answer = ["_ ","_ ","_ ","_ ","_ ","_ ","_ ","_ ","_ "];
+    correctLetters = ["l", "a", "n", "n", "i", "s", "t", "e", "r"];
+}
 
-document.getElementById("word-blanks").textContent = answer.join("  ");
+
+document.getElementById("word-blanks").textContent = answer.join("");
+
 
 }
 
 gameSet();
 
-//make a for loop here to create answer variables to replace repeating code
+
+//create a for loop here to create answer variables to replace repeating code
 
 
 //defining a function to reset the game
@@ -82,7 +97,6 @@ document.onkeyup = function(event) {
         if (userGuess === correctLetters[i]) {
 
             answer[i] = userGuess;
-            // answer.splice(correctLetters.indexOf(userGuess), 1, (userGuess));
 
             winCheck = answer.join("");
 
